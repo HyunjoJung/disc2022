@@ -1,13 +1,14 @@
 <html>
-<head>
-	<title>Áß°£°í»ç 4¹ø</title>
+<head> <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ì¤‘ê°„ê³ ì‚¬ 4ë²ˆ</title>
 <head><style>
 #add-btn{}
 		ul{}
 		li{}
 .active{ background: orange; }
 </style>
-<button id="add-btn">Ãß°¡</button>
+<button id="add-btn">ì¶”ê°€</button>
 
 <ul id='list'>
 <li>click</li>
@@ -35,12 +36,12 @@ function activeItem(event){
 			event.target.parentNode.children[i].removeAttribute('class');
 		}
 
-		event.target.setAttribute('class', 'active'); // Å¬¸¯ÇÑ ´ë»ó			
+		event.target.setAttribute('class', 'active'); // í´ë¦­í•œ ëŒ€ìƒ			
   }	
 }		
 
 addBtn.addEventListener('click', function(){
-	var txt = prompt('ÀÔ·Â');
+	var txt = prompt('ì…ë ¥');
 	list.innerHTML += '<li>' + txt + '</li>';
 });
 </script>
