@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>중간고사 2번</title>
+</head>
+
+<script>
+plusList = []
+mydata = [1,2,3,4,5]
+plusNum = Math.floor(Math.random() * 100) + 1 
+for(var i = 5;i < plusNum+5; i++){ 
+  num = Math.floor(Math.random() * 100) + 1
+  mydata[i] = Number(num)
+}
+
+numSum = 0
+for(i = 0; i< mydata.length; i++){
+  numSum += mydata[i] 
+}
+plusList = [mydata.length, numSum, numSum/mydata.length]
+mydata = mydata.concat(plusList)
+alert(mydata)
+
+
+</script>
+</head>
+	
+</html>

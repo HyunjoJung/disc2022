@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>중간고사 3번</title>
+
+<script>
+var Jinsu = { naem : "Jinsu", age : 21 }
+var Chulsu = { naem : "Chulsu", age : 20 }
+window.onload = function() {
+  var btn = document.querySelectorAll('button');
+  for(i=0; i < btn.length; i++){
+    btn[i].onclick = function() {
+    this.innerHTML += "평균값:" + (Jinsu.age + Chulsu.age)/2+'</br>'; 
+    Jinsu.age++
+    Chulsu.age++
+    }
+  }
+}
+
+</script>
+</head>
+<body>
+<button> sum</button>
+<button> sum</button>
+<button> sum</button>
+</body>	
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>중간고사 4번</title>
+<head><style>
+#add-btn{}
+		ul{}
+		li{}
+.active{ background: orange; }
+</style>
+<button id="add-btn">추가</button>
+
+<ul id='list'>
+<li>click</li>
+<li>second</li>
+<li>third</li>
+</ul>
+<script>
+var list = document.getElementById('list');
+var li = list.getElementsByTagName('li');
+var addBtn = document.getElementById('add-btn')
+
+for(var i = 0; i < li.length; i++) {
+  li[i].addEventListener('click', activeItem);
+}
+function activeItem() {
+  this.setAttribute('class', 'active');
+}
+
+list.addEventListener('click', activeItem); 
+
+function activeItem(event){
+  if(event.target.nodeName == 'LI'){
+
+		for(var i = 0; i < event.target.parentNode.children.length; i++){
+			event.target.parentNode.children[i].removeAttribute('class');
+		}
+
+		event.target.setAttribute('class', 'active'); // 클릭한 대상			
+  }	
+}		
+
+addBtn.addEventListener('click', function(){
+	var txt = prompt('입력');
+	list.innerHTML += '<li>' + txt + '</li>';
+});
+</script>
+</head>
+	
+</html>
